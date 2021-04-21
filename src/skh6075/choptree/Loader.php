@@ -84,6 +84,7 @@ final class Loader extends PluginBase implements Listener{
     /** @return Block[] */
     private function getNearByBlocks(Position $position, int $radius): array{
         $result = [];
+
         for ($x = -$radius; $x < $radius; $x ++) {
             for ($z = -$radius; $z < $radius; $z++) {
                 $block = $position->getWorld()->getBlock($position->add($x, 0, $z));
